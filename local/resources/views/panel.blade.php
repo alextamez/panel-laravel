@@ -25,7 +25,20 @@
 				<th>Apellido</th>
 				<th>Email</th>
 				<th>Password</th>
+				<th>Opciones</th>
 		    </tr>
+		    <!--@if (!empty($usuarios))-->
+			    @foreach($usuarios as $usuario)
+			    <tr>
+				    <td>{{$usuario->id}}</td>
+				    <td>{{$usuario->nombre}}</td>
+				    <td>{{$usuario->apellido}}</td>
+				    <td>{{$usuario->email}}</td>
+				    <td>{{$usuario->password}}</td>
+				    <td><button id="btn-eliminar" class="button-link" value="{{$usuario->id}}">Eliminar</button></td>
+				</tr>
+			    @endforeach
+		    <!--@endif-->
 		</table>
 	</div>
 </div>

@@ -13,6 +13,13 @@ class panelcontroller extends Controller
     public function show (Request $request)
     {
     	$usuarios = Usuario::all();
-    	return redirect('panel')->with('usuarios', $usuarios);
+    	//dd($usuarios);
+
+    	return view('panel')->with('usuarios', $usuarios);
+    }
+
+    public function delete ($id)
+    {
+    	dd($id);
     }
 }

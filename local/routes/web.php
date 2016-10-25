@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('panel', 'panelcontroller@show');
-});
+/*Route::get('/', function () {
+    return view('panel');
+});*/
+
+Route::get('/', 'panelcontroller@show');
+
+Route::delete('/{id}', 'panelcontroller@delete');
