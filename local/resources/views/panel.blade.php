@@ -29,18 +29,19 @@
 		    </tr>
 		    <!--@if (!empty($usuarios))-->
 			    @foreach($usuarios as $usuario)
-			    <tr>
+			    <tr id="usr{{$usuario->id}}">
 				    <td>{{$usuario->id}}</td>
 				    <td>{{$usuario->nombre}}</td>
 				    <td>{{$usuario->apellido}}</td>
 				    <td>{{$usuario->email}}</td>
 				    <td>{{$usuario->password}}</td>
-				    <td><button id="btn-eliminar" class="button-link" value="{{$usuario->id}}">Eliminar</button></td>
+				    <td><button class="button-link btn-eliminar" value="{{$usuario->id}}">Eliminar</button></td>
 				</tr>
 			    @endforeach
 		    <!--@endif-->
 		</table>
 	</div>
 </div>
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 @stop

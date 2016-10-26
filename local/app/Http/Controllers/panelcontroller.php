@@ -10,7 +10,7 @@ use App\Usuario;
 
 class panelcontroller extends Controller
 {
-    public function show (Request $request)
+    public function show ()
     {
     	$usuarios = Usuario::all();
     	//dd($usuarios);
@@ -18,8 +18,13 @@ class panelcontroller extends Controller
     	return view('panel')->with('usuarios', $usuarios);
     }
 
-    public function delete ($id)
+    public function delete (Request $request)
     {
-    	dd($id);
+        $info = $request->all();
+
+        $usuario = Usuario::destroy($info['id']);
+        return response()->json($usuario);
+
+    	//return response()->json(['mensaje' => 'Hola como estas soy el id: ' . $info['id']]);
     }
 }

@@ -17,4 +17,6 @@
 
 Route::get('/', 'panelcontroller@show');
 
-Route::delete('/{id}', 'panelcontroller@delete');
+Route::post('/create', 'panelcontroller@create');
+
+Route::post('/delete', 'panelcontroller@delete');
