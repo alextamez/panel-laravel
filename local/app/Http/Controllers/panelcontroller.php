@@ -30,6 +30,15 @@ class panelcontroller extends Controller
 
     public function create (Request $request)
     {
-        //
+        $info = $request->all();
+
+        $_Usuario = new Usuario;
+        $_Usuario->nombre = $info['nombre'];
+        $_Usuario->apellido = $info['apellido'];
+        $_Usuario->email = $info['email'];
+        $_Usuario->password = $info['password'];
+        $_Usuario->save();
+
+        return response()->json($_Usuario);
     }
 }

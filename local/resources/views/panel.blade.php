@@ -23,7 +23,7 @@
 <div class="container">
 	<p><button id="btn-agregar" class="button-link">Agregar nuevo usuario</button></p>
 	<div class="table-responsive">
-		<table class="table table-striped">
+		<table id="tbl-usuarios" class="table table-striped">
 			<tr>
 				<th>ID</th>
 				<th>Nombre</th>

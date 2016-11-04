@@ -6,7 +6,7 @@
         <h4 class="modal-title" id="myModalLabel">Nuevo Usuario</h4>
       </div>
       <div class="modal-body">
-        <form id="formacontacto" class="form-horizontal">
+        <form id="frm-usuario" class="form-horizontal">
           <div class="form-group">
               <div class="col-sm-10">
                   <input type="text" name="nombre" placeholder="Nombre" class="form-control" id="nombre" required>
@@ -31,7 +31,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Agregar</button>
+        <button type="button" id="btn-save" class="btn btn-primary">Agregar</button>
       </div>
     </div>
   </div>

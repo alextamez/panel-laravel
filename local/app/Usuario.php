@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Usuario extends Model
 {
-    protected $fillable = ['id', 'nombre', 'apellido', 'email', 'password'];
+	//Eloquent asume que la tabla cuenta con la columna id, por lo tanto esta columna esta por default.
+	public $timestamps = false;
+    protected $fillable = ['nombre', 'apellido', 'email', 'password'];
 }
