@@ -27,4 +27,9 @@ class panelcontroller extends Controller
 
     	//return response()->json(['mensaje' => 'Hola como estas soy el id: ' . $info['id']]);
     }
+
+    public function create (Request $request)
+    {
+        //
+    }
 }

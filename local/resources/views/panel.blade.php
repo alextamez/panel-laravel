@@ -1,7 +1,10 @@
 @extends('layout.master')
+@include('modals.nuevousuario')
+
 @section('title', 'Panel de Usuarios')
 
 <!--Barra de Navegacion-->
+
 @section('navbar')
 <div class="container">
 	<div class="row">
@@ -15,8 +18,10 @@
 @stop
 
 <!--Contenido-->
+
 @section('content')
 <div class="container">
+	<p><button id="btn-agregar" class="button-link">Agregar nuevo usuario</button></p>
 	<div class="table-responsive">
 		<table class="table table-striped">
 			<tr>
@@ -43,5 +48,4 @@
 	</div>
 </div>
 <meta name="csrf-token" content="{{ csrf_token() }}" />
-
 @stop

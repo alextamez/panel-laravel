@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	//Eliminar Usuario
+	//--Eliminar Usuario--
 	$(".btn-eliminar").click(function(){
 
 		var _baseurl = "/panel-laravel";
@@ -32,6 +32,11 @@ $(document).ready(function(){
 		    });
 		}
 
+	});
+
+	//--Agregar Usuario--
+	$("#btn-agregar").click(function(){
+		$("#myModal").modal("show");
 	});
 
 });
