@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 			$.ajax({
 				type: "POST",
-	            url: _baseurl + "/delete",
+	            url: _baseurl + "/panel/delete",
 	            data: {id: _id},
 	            success: function (data) {
 	                //console.log(data);
@@ -51,7 +51,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			type: "POST",
-            url: _baseurl + "/create",
+            url: _baseurl + "/panel/create",
             data: {
             	   nombre: $("#nombre").val(),
                    apellido: $("#apellido").val(),

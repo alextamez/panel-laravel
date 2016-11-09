@@ -15,8 +15,14 @@
     return view('panel');
 });*/
 
-Route::get('/', 'panelcontroller@show');
+Route::get('/', function(){
+	return view('login');
+});
 
-Route::post('/create', 'panelcontroller@create');
+Route::post('/', 'logincontroller@auth');
 
-Route::post('/delete', 'panelcontroller@delete');
+Route::get('/panel', 'panelcontroller@show');
+
+Route::post('/panel/create', 'panelcontroller@create');
+
+Route::post('/panel/delete', 'panelcontroller@delete');
