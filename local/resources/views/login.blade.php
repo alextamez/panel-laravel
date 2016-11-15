@@ -23,7 +23,7 @@
 <div class="container">
 	<div class="col-sm-4"></div>
 		<div class="col-sm-4">
-			{{ Form::open(['url' => ' ', 'class' => 'form-horizontal', 'method' => 'post', 'id' => 'formalogin']) }}
+			{{ Form::open(['url' => 'login', 'class' => 'form-horizontal', 'method' => 'post', 'id' => 'formalogin']) }}
                 <div class="form-group">
 	                <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
                 </div>
@@ -35,4 +35,7 @@
 		</div>
 		<div class="col-sm-4"></div>
 </div>
+@if(session('status'))
+        <script type="text/javascript">alert("{{session('status')}}")</script>
+@endif
 @stop

@@ -15,11 +15,15 @@
     return view('panel');
 });*/
 
-Route::get('/', function(){
+Route::get('/', function () {
+	return redirect('login');
+});
+
+Route::get('/login', function () {
 	return view('login');
 });
 
-Route::post('/', 'logincontroller@auth');
+Route::post('/login', 'logincontroller@auth');
 
 Route::get('/panel', 'panelcontroller@show');
 
