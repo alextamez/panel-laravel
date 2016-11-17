@@ -25,6 +25,8 @@ Route::get('/login', function () {
 
 Route::post('/login', 'logincontroller@auth');
 
+Route::post('/logout', 'logincontroller@signout');
+
 Route::get('/panel', 'panelcontroller@show');
 
 Route::post('/panel/create', 'panelcontroller@create');

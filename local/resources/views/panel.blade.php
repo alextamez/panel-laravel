@@ -12,7 +12,16 @@
 			<img src="{{url('')}}/img/justadmin.png"/>
 		</div>
 		<div class="col-xs-4 col-sm-4 col-md-4"></div>
-		<div class="col-xs-4 col-sm-4 col-md-4 align-right" style="padding:50">Login</div>
+		@if(session('userinfo'))
+		<div class="col-xs-4 col-sm-4 col-md-4 align-right" style="padding:50">
+			{{ Form::open(['url' => 'logout', 'method' => 'post']) }}
+	        <input type="submit" class="button-link" name="logout" value="Logout" onclick="return confirmLogout()">
+	        {{ Form::close() }}
+        </div>
+		@else
+		<!--<div class="col-xs-4 col-sm-4 col-md-4 align-right" style="padding:50">Login</div>-->
+		<script type="text/javascript">window.location.href = "{{url('')}}/login";</script>
+		@endif
 	</div>
 </div>
 @stop

@@ -1,3 +1,17 @@
+
+function confirmLogout()
+{
+	if (confirm('Esta usted seguro de cerrar la sesion?'))
+	{
+		return true;
+		
+	}else{
+
+		return false;
+	}
+}
+
+//JQuery-Ajax
 $(document).ready(function(){
 
 	var _baseurl = "/panel-laravel";
